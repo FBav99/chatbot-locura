@@ -3,10 +3,10 @@ from openai import AzureOpenAI
  
 
 # Database connection details
-SERVER = '150.230.80.12'
-DATABASE = 'AdventureWorksDW2019'
-USERNAME = 'sa'
-PASSWORD = 'yourStrong(!)Password'
+SERVER = 'IP'
+DATABASE = 'DB'
+USERNAME = 'USER'
+PASSWORD = 'PASSWORD'
 DRIVER = 'ODBC Driver 18 for SQL Server'
 
 # Build connection string
@@ -37,9 +37,9 @@ except pyodbc.Error as e:
 
 # OpenAI API Client
 client = AzureOpenAI(
-    api_key="2Xx26KLEGiyLugPxVHYWPLOISlJ1Sos4Oo9rpOHIaJc1b9h6dNrHJQQJ99BBACHYHv6XJ3w3AAAAACOG0WK8",
-    api_version="2024-05-01-preview",
-    azure_endpoint="https://fbave-m7ajtzdz-eastus2.openai.azure.com/"
+    api_key="API KEY",
+    api_version=" VERSION DE LA API ",
+    azure_endpoint="ENDPOINT DE AZURE/OPENAI"
 )
 def clean_sql_query(query):
     """Limpia el query de SQL para evitar errores por como da el output el GPT, tanto como prefijos como caracteres extra"""
